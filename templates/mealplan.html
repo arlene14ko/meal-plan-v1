@@ -1,6 +1,5 @@
 {% extends "layout.html" %}
 {% block content %}
-
 <div class="card border-info">
     <div class="card-body">
         <table class="table">
@@ -20,7 +19,7 @@
               <tr>
                 <th scope="row">Dinner</th>
                 <td>
-                    <select class="form-select">
+                    <select class="form-select form-select-sm">
                         <option selected>Choose: </option>
                         {% for recipe in recipes %}
                             <option value={{recipe}}>{{recipe}}</option>
@@ -28,7 +27,7 @@
                     </select>
                 </td>
                 <td>
-                    <select class="form-select">
+                    <select class="form-select form-select-sm">
                         <option selected>Choose: </option>
                         {% for recipe in recipes %}
                             <option value={{recipe}}>{{recipe}}</option>
@@ -36,7 +35,7 @@
                     </select>
                 </td>
                 <td>
-                    <select class="form-select">
+                    <select class="form-select form-select-sm">
                         <option selected>Choose: </option>
                         {% for recipe in recipes %}
                             <option value={{recipe}}>{{recipe}}</option>
@@ -44,7 +43,7 @@
                     </select>
                 </td>
                 <td>
-                    <select class="form-select">
+                    <select class="form-select form-select-sm">
                         <option selected>Choose: </option>
                         {% for recipe in recipes %}
                             <option value={{recipe}}>{{recipe}}</option>
@@ -52,7 +51,7 @@
                     </select>
                 </td>
                 <td>
-                    <select class="form-select">
+                    <select class="form-select form-select-sm">
                         <option selected>Choose: </option>
                         {% for recipe in recipes %}
                             <option value={{recipe}}>{{recipe}}</option>
@@ -60,7 +59,7 @@
                     </select>
                 </td>
                 <td>
-                    <select class="form-select">
+                    <select class="form-select form-select-sm">
                         <option selected>Choose: </option>
                         {% for recipe in recipes %}
                             <option value={{recipe}}>{{recipe}}</option>
@@ -68,7 +67,7 @@
                     </select>
                 </td>
                 <td>
-                    <select class="form-select">
+                    <select class="form-select form-select-sm">
                         <option selected>Choose: </option>
                         {% for recipe in recipes %}
                             <option value={{recipe}}>{{recipe}}</option>
@@ -79,7 +78,7 @@
               <tr>
                 <th scope="row">Lunch</th>
                 <td>
-                    <select class="form-select">
+                    <select class="form-select form-select-sm">
                         <option selected>Choose: </option>
                         {% for recipe in recipes %}
                             <option value={{recipe}}>{{recipe}}</option>
@@ -87,7 +86,7 @@
                     </select>
                 </td>
                 <td>
-                    <select class="form-select">
+                    <select class="form-select form-select-sm">
                         <option selected>Choose: </option>
                         {% for recipe in recipes %}
                             <option value={{recipe}}>{{recipe}}</option>
@@ -95,7 +94,7 @@
                     </select>
                 </td>
                 <td>
-                    <select class="form-select">
+                    <select class="form-select form-select-sm">
                         <option selected>Choose: </option>
                         {% for recipe in recipes %}
                             <option value={{recipe}}>{{recipe}}</option>
@@ -103,7 +102,7 @@
                     </select>
                 </td>
                 <td>
-                    <select class="form-select">
+                    <select class="form-select form-select-sm">
                         <option selected>Choose: </option>
                         {% for recipe in recipes %}
                             <option value={{recipe}}>{{recipe}}</option>
@@ -111,7 +110,7 @@
                     </select>
                 </td>
                 <td>
-                    <select class="form-select">
+                    <select class="form-select form-select-sm">
                         <option selected>Choose: </option>
                         {% for recipe in recipes %}
                             <option value={{recipe}}>{{recipe}}</option>
@@ -119,7 +118,7 @@
                     </select>
                 </td>
                 <td>
-                    <select class="form-select">
+                    <select class="form-select form-select-sm">
                         <option selected>Choose: </option>
                         {% for recipe in recipes %}
                             <option value={{recipe}}>{{recipe}}</option>
@@ -127,7 +126,7 @@
                     </select>
                 </td>
                 <td>
-                    <select class="form-select">
+                    <select class="form-select form-select-sm">
                         <option selected>Choose: </option>
                         {% for recipe in recipes %}
                             <option value={{recipe}}>{{recipe}}</option>
@@ -256,11 +255,13 @@
             </tbody>
           </table>
           <div style="text-align: center;">
-            <button type="button" class="btn btn-info" style="text-align: center;">Finalize</button>
+            <button type="button" class="btn btn-info" style="text-align: center;">Genarate shopping list</button>
         </div>
     </div>
 </div>
 <br>
+
+{% if shopping_list == True %}
 
 <div class="card border-info">
     <div class="card-header">SHOPPING LIST</div>
@@ -306,5 +307,6 @@
         </div>
     </div>
 </div>
+{% endif %}
 
 {% endblock content %}

@@ -1,13 +1,14 @@
 from flask import Flask, render_template
-
+from recipes import Recipe
 app = Flask(__name__)
 
 
 @app.route('/')
 @app.route('/mealplan')
 def index():
-    meals = ["chicken", "beef", "rice", "noodles"]
-    return render_template("mealplan.html", recipes=meals)
+    recipes_list = Recipe.list_recipes()
+    dinner = Recipe.dinner_recipes()
+    return render_template("mealplan.html", recipes=dinner)
 
 @app.route('/recipes')
 def recipes():
